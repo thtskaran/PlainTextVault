@@ -63,19 +63,20 @@ def main():
             f.write(encrypted_data)
         print("Data encrypted and stored in vault.val")
         print(f"Your passphrase (use it for decryption): {passphrase}")
+        print("Please type 'exit' to securely close the terminal session.")
     elif choice == '2':
         file_path = input("Enter the path to the encrypted file: ")
         passphrase = input("Enter your passphrase: ")
         try:
             with open(file_path, "rb") as f:
                 encrypted_data = f.read()
-            # Extract the salt used during encryption from the encrypted data
             salt = encrypted_data[:16]
             key = derive_key(passphrase, salt)
             decrypted_data = decrypt_data(key, encrypted_data)
             print("Decrypted text:", decrypted_data.decode())
         except Exception as e:
             print("Error during decryption:", e)
+        print("Please type 'exit' to securely close the terminal session.")
     else:
         print("Invalid choice.")
 
