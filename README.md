@@ -87,4 +87,4 @@ Contributions to PlainTextVault are welcome. Feel free to submit pull requests o
 
 ## License
 
-PlainTextVault is open-source software licensed under the MIT License.
+PlainTextVault is open-source software licensed under the [APACHE LICENSE 2.0]
